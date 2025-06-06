@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trrackify</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="shortcut icon" href="tracify.png" type="image/x-icon">
+
+</head>
+<body>
+    <div class="title"><h1 >Trrackify - Stay on Track, Effortlessly</h1>
+    <div class="board">
+        <div class="column" id ="todo">
+        <h2><i class="fas fa-lightbulb"></i> To Do (<span id="todo-count">0</span>)</h2>
+        <div class="tasks" id="todo-tasks"></div>
+        <input type="text"
+        class="task-input" id="todo-input" placeholder="Add a task-input"/>
+        <button class="add-task" onclick="addTask('todo')">Add Task</button>
+        <button class="remove"  id="todo-remove">Clear All tasks</button>
+    </div>
+    <div class="column" id ="doing">
+        <h2><i class="fas fa-spinner"></i> Doing (<span id="doing-count">0</span>)</h2>
+        <div class="tasks" id="doing-tasks"></div>
+        <input type="text"
+        class="task-input" id="doing-input" placeholder="Add a task-input"/>
+        <button class="add-task" onclick ="addTask('doing')" >Add Task</button>
+        <button class="remove" id ="doing-remove">Clear All tasks</button>
+    </div>
+    <div class="column" id ="done">
+        <h2><i class="fas fa-check-circle"></i> Done (<span id="done-count">0</span>)</h2>
+
+        <div class="tasks" id="done-tasks"></div>
+        <input type="text"
+        class="task-input" id="done-input" placeholder="Add a task-input"/>
+        <button class="add-task" onclick="addTask('done')">Add Task</button>
+        <button class="remove" id="done-remove">Clear All tasks</button>
+    </div>
+</div>
+<div class="context-menu">
+    <ul>
+    <li onclick ="editTask()">Edit</li>
+    <li onclick ="deleteTask()">delete</li></ul>
+</div>
+</div>
+<script src="./script.js"></script>
+</body>
+</html>
